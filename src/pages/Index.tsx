@@ -1,22 +1,32 @@
+import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
-import BenefitsSection from "@/components/BenefitsSection";
-import ContentSection from "@/components/ContentSection";
-import DevicesSection from "@/components/DevicesSection";
-import TestimonialsSection from "@/components/TestimonialsSection";
+import LogosMarquee from "@/components/LogosMarquee";
+import VideoSection from "@/components/VideoSection";
+import ContentGallery from "@/components/ContentGallery";
+import FeaturesSection from "@/components/FeaturesSection";
+import ReasonsSection from "@/components/ReasonsSection";
+import BenefitsFAQ from "@/components/BenefitsFAQ";
+import PricingComparison from "@/components/PricingComparison";
+import PricingPlans from "@/components/PricingPlans";
+import GuaranteeSection from "@/components/GuaranteeSection";
 import FAQSection from "@/components/FAQSection";
-import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
     <main className="min-h-screen bg-background">
+      <Header />
       <HeroSection />
-      <BenefitsSection />
-      <ContentSection />
-      <DevicesSection />
-      <TestimonialsSection />
+      <LogosMarquee />
+      <VideoSection />
+      <ContentGallery />
+      <FeaturesSection />
+      <ReasonsSection />
+      <BenefitsFAQ />
+      <PricingComparison />
+      <PricingPlans />
+      <GuaranteeSection />
       <FAQSection />
-      <CTASection />
       <Footer />
     </main>
   );
