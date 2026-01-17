@@ -8,7 +8,7 @@ const plans = [
     screens: "3 telas simultâneas",
     price: "25,90",
     installments: null,
-    link: "https://pay.cakto.com.br/9snqsP3",
+    link: "https://pay.kambafy.com/checkout/e3df920e-4e56-4c77-baa4-9f08ca03e3fb",
     popular: false
   },
   {
@@ -17,7 +17,7 @@ const plans = [
     screens: "3 telas simultâneas",
     price: "59,90",
     installments: "Ou 3x de R$19,66 no cartão",
-    link: "https://pay.cakto.com.br/3fsy24d",
+    link: "https://pay.kambafy.com/checkout/e3df920e-4e56-4c77-baa4-9f08ca03e3fb",
     popular: false
   },
   {
@@ -26,7 +26,7 @@ const plans = [
     screens: "3 telas simultâneas",
     price: "89,90",
     installments: "Ou 6x de R$14,37 no cartão",
-    link: "https://pay.cakto.com.br/32ocvxm",
+    link: "https://pay.kambafy.com/checkout/e3df920e-4e56-4c77-baa4-9f08ca03e3fb",
     popular: false
   },
   {
@@ -35,7 +35,7 @@ const plans = [
     screens: "4 telas simultâneas",
     price: "129,90",
     installments: "Ou 12x de R$10,82 no cartão",
-    link: "https://pay.cakto.com.br/u9wz86m",
+    link: "https://pay.kambafy.com/checkout/e3df920e-4e56-4c77-baa4-9f08ca03e3fb",
     popular: true
   }
 ];
