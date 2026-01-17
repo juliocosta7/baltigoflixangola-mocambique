@@ -2,17 +2,17 @@ import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
 
 const services = [
-  { logo: "https://fireplaytv.com/wp-content/uploads/2025/06/NETFLIX.webp", name: "Netflix", price: "R$ 59,90" },
-  { logo: "https://fireplaytv.com/wp-content/uploads/2025/06/PRIME-VIDEO.webp", name: "Prime Video", price: "R$ 25,90" },
-  { logo: "https://fireplaytv.com/wp-content/uploads/2025/06/DISNEY.webp", name: "Disney+", price: "R$ 62,90" },
-  { logo: "https://fireplaytv.com/wp-content/uploads/2025/06/MAX.webp", name: "Max", price: "R$ 39,90" },
-  { logo: "https://fireplaytv.com/wp-content/uploads/2025/06/image-2127.webp", name: "Paramount+", price: "R$ 21,90" },
-  { logo: "https://fireplaytv.com/wp-content/uploads/2025/06/GLOBOPLAY.webp", name: "Globoplay", price: "R$ 39,90" },
-  { logo: "https://fireplaytv.com/wp-content/uploads/2025/06/SKY.webp", name: "Sky", price: "R$ 44,95" },
-  { logo: "https://fireplaytv.com/wp-content/uploads/2025/06/COMBATE.webp", name: "Combate", price: "R$ 34,90" },
-  { logo: "https://fireplaytv.com/wp-content/uploads/2025/06/TELECINE.webp", name: "Telecine", price: "R$ 29,90" },
-  { logo: "https://fireplaytv.com/wp-content/uploads/2025/06/CLARO-TV.webp", name: "Claro TV", price: "R$ 89,90" },
-  { logo: "https://fireplaytv.com/wp-content/uploads/2025/06/CRUNCHROLL.webp", name: "Crunchyroll", price: "R$ 25,90" },
+  { logo: "https://fireplaytv.com/wp-content/uploads/2025/06/NETFLIX.webp", name: "Netflix", price: "KZ 9024,88 | MZ " },
+  { logo: "https://fireplaytv.com/wp-content/uploads/2025/06/PRIME-VIDEO.webp", name: "Prime Video", price: "4625 KZ | MZ " },
+  { logo: "https://fireplaytv.com/wp-content/uploads/2025/06/DISNEY.webp", name: "Disney+", price: "KZ 10730,91 | MZ " },
+  { logo: "https://fireplaytv.com/wp-content/uploads/2025/06/MAX.webp", name: "Max", price: "KZ 6807,05 | MZ " },
+  { logo: "https://fireplaytv.com/wp-content/uploads/2025/06/image-2127.webp", name: "Paramount+", price: "KZ 3736,20 | MZ " },
+  { logo: "https://fireplaytv.com/wp-content/uploads/2025/06/GLOBOPLAY.webp", name: "Globoplay", price: "KZ 6807,05 | MZ " },
+  { logo: "https://fireplaytv.com/wp-content/uploads/2025/06/SKY.webp", name: "Sky", price: "KZ 7668,59 | MZ " },
+  { logo: "https://fireplaytv.com/wp-content/uploads/2025/06/COMBATE.webp", name: "Combate", price: "KZ 5954,03 | MZ " },
+  { logo: "https://fireplaytv.com/wp-content/uploads/2025/06/TELECINE.webp", name: "Telecine", price: "KZ 5101,02 | MZ " },
+  { logo: "https://fireplaytv.com/wp-content/uploads/2025/06/CLARO-TV.webp", name: "Claro TV", price: "KZ 15337,18 | MZ " },
+  { logo: "https://fireplaytv.com/wp-content/uploads/2025/06/CRUNCHROLL.webp", name: "Crunchyroll", price: "KZ 4418,61 | MZ " },
 ];
 
 const PricingComparison = () => {
@@ -55,8 +55,8 @@ const PricingComparison = () => {
           {/* Total */}
           <div className="grid grid-cols-3 gap-4 items-center bg-primary/10 p-4 rounded-lg border border-primary/30 mt-4">
             <span className="font-bold">Total Mensal</span>
-            <span className="text-center font-bold text-red-500">R$ 463,95</span>
-            <span className="text-right font-bold text-green-500">R$ 11,31</span>
+            <span className="text-center font-bold text-red-500">KZ 79151,13 | </span>
+            <span className="text-right font-bold text-green-500">KZ 1929,52</span>
           </div>
         </div>
 
