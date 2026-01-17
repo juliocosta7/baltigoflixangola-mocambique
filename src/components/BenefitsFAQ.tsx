@@ -8,7 +8,7 @@ import {
 const benefits = [
   {
     question: "Preciso pagar mensalidade?",
-    answer: "Não. Com o BaltigoFlix, você recebe um código de acesso equivalente a sua assinatura, sem a necessidade de pagamentos extras por conteúdo."
+    answer: "Sim. Com o BaltigoFlix, você recebe um código de acesso equivalente a sua assinatura, sem a necessidade de pagamentos extras por conteúdo."
   },
   {
     question: "Como é a instalação?",
@@ -16,7 +16,7 @@ const benefits = [
   },
   {
     question: "Qual o prazo de entrega?",
-    answer: "Pagamentos via cartão, débito ou Pix: acesso em minutos. Boleto: até 2 dias úteis."
+    answer: "Pagamentos via Multicaixa Express, Pagamento po Referência: acesso em minutos. Tranferência Bancaria: até 2 dias úteis."
   }
 ];
 
