@@ -1,44 +1,39 @@
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
+import { useCountry, prices } from "@/contexts/CountryContext";
 
-const plans = [
-  {
+const planKeys = ['mensal', 'trimestral', 'semestral', 'anual'] as const;
+
+const planDetails = {
+  mensal: {
     name: "mensal",
     duration: "Acesso de 1 mês",
     screens: "3 telas simultâneas",
-    price: "25,90",
-    installments: null,
     link: "https://pay.kambafy.com/checkout/e3df920e-4e56-4c77-baa4-9f08ca03e3fb",
     popular: false
   },
-  {
+  trimestral: {
     name: "trimestral",
     duration: "Acesso de 3 meses",
     screens: "3 telas simultâneas",
-    price: "59,90",
-    installments: "Ou 3x de R$19,66 no cartão",
     link: "https://pay.kambafy.com/checkout/e3df920e-4e56-4c77-baa4-9f08ca03e3fb",
     popular: false
   },
-  {
+  semestral: {
     name: "semestral",
     duration: "Acesso de 6 meses",
     screens: "3 telas simultâneas",
-    price: "89,90",
-    installments: "Ou 6x de R$14,37 no cartão",
     link: "https://pay.kambafy.com/checkout/e3df920e-4e56-4c77-baa4-9f08ca03e3fb",
     popular: false
   },
-  {
+  anual: {
     name: "anual",
     duration: "Acesso de 1 ano",
     screens: "4 telas simultâneas",
-    price: "129,90",
-    installments: "Ou 12x de R$10,82 no cartão",
     link: "https://pay.kambafy.com/checkout/e3df920e-4e56-4c77-baa4-9f08ca03e3fb",
     popular: true
   }
-];
+};
 
 const features = [
   "+ de 40 mil conteúdos",
@@ -47,72 +42,111 @@ const features = [
   "Assista na Smart Tv, Tablet, Smartphone, TV Box ou Computador."
 ];
 
+const paymentMethods = {
+  angola: [
+    { name: "Multicaixa Express", image: "https://play-lh.googleusercontent.com/bHK3-NthxC6JYI3wV9eDq1f1LHJDxz5P-lnqjHAKJD4sU1QpR0rTuF9KVqg9JKq4rQ=w240-h480-rw" },
+    { name: "Transferência Bancária", image: "https://cdn-icons-png.flaticon.com/512/2830/2830284.png" }
+  ],
+  mozambique: [
+    { name: "M-Pesa", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/M-PESA_LOGO-01.svg/2560px-M-PESA_LOGO-01.svg.png" },
+    { name: "E-Mola", image: "https://play-lh.googleusercontent.com/wqwKGhfMxCvX1Aw9g8sLJNv2L8f6x-NyQqQfEE8FFnJKZrZvTZvvFnCBYGEpVKhMKQ=w240-h480-rw" }
+  ]
+};
+
 const PricingPlans = () => {
+  const { country, currencySymbol } = useCountry();
+  const countryPrices = prices[country];
+  const methods = paymentMethods[country];
+
   return (
-    <section id="planos" className="py-20 bg-gradient-hero scroll-mt-20">
+    <section id="planos" className="py-12 sm:py-20 bg-gradient-hero scroll-mt-20">
       <div className="container mx-auto px-4">
-        <h2 className="font-display text-4xl md:text-5xl text-center mb-4">
-          Aproveite essa <span className="text-primary">oportunidade única!</span>
+        <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-center mb-4">
+          Aproveite esta <span className="text-primary">oportunidade única!</span>
         </h2>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto mt-12">
-          {plans.map((plan, index) => (
-            <div 
-              key={index}
-              className={`relative bg-gradient-card rounded-2xl border overflow-hidden ${
-                plan.popular 
-                  ? 'border-primary shadow-fire' 
-                  : 'border-border/50'
-              }`}
-            >
-              {plan.popular && (
-                <div className="absolute top-0 left-0 right-0 bg-primary text-primary-foreground text-center py-1 text-sm font-bold">
-                  MAIS POPULAR
-                </div>
-              )}
-              
-              <div className={`p-6 ${plan.popular ? 'pt-10' : ''}`}>
-                <div className="text-center mb-6">
-                  <span className="text-muted-foreground text-sm uppercase">PLANO</span>
-                  <h3 className="font-display text-3xl mt-1">{plan.name}</h3>
-                </div>
-
-                <ul className="space-y-3 mb-6">
-                  <li className="flex items-center gap-2 text-sm">
-                    <Check className="w-4 h-4 text-green-500 flex-shrink-0" />
-                    {plan.duration}
-                  </li>
-                  <li className="flex items-center gap-2 text-sm">
-                    <Check className="w-4 h-4 text-green-500 flex-shrink-0" />
-                    Assista em {plan.screens}
-                  </li>
-                  {features.map((feature, i) => (
-                    <li key={i} className="flex items-center gap-2 text-sm">
-                      <Check className="w-4 h-4 text-green-500 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-
-                <div className="text-center mb-6">
-                  <span className="text-muted-foreground text-sm">Por</span>
-                  <div className="flex items-baseline justify-center gap-1">
-                    <span className="text-muted-foreground">R$</span>
-                    <span className="font-display text-5xl text-primary">{plan.price}</span>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mt-8 sm:mt-12">
+          {planKeys.map((key) => {
+            const plan = planDetails[key];
+            const pricing = countryPrices.plans[key];
+            
+            return (
+              <div 
+                key={key}
+                className={`relative bg-gradient-card rounded-2xl border overflow-hidden ${
+                  plan.popular 
+                    ? 'border-primary shadow-fire' 
+                    : 'border-border/50'
+                }`}
+              >
+                {plan.popular && (
+                  <div className="absolute top-0 left-0 right-0 bg-primary text-primary-foreground text-center py-1 text-sm font-bold">
+                    MAIS POPULAR
                   </div>
-                  {plan.installments && (
-                    <p className="text-xs text-muted-foreground mt-2">{plan.installments}</p>
-                  )}
-                </div>
+                )}
+                
+                <div className={`p-4 sm:p-6 ${plan.popular ? 'pt-10' : ''}`}>
+                  <div className="text-center mb-4 sm:mb-6">
+                    <span className="text-muted-foreground text-xs sm:text-sm uppercase">PLANO</span>
+                    <h3 className="font-display text-2xl sm:text-3xl mt-1">{plan.name}</h3>
+                  </div>
 
-                <a href={plan.link} target="_blank" rel="noopener noreferrer">
-                  <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold">
-                    COMPRAR AGORA
-                  </Button>
-                </a>
+                  <ul className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
+                    <li className="flex items-center gap-2 text-xs sm:text-sm">
+                      <Check className="w-4 h-4 text-green-500 flex-shrink-0" />
+                      {plan.duration}
+                    </li>
+                    <li className="flex items-center gap-2 text-xs sm:text-sm">
+                      <Check className="w-4 h-4 text-green-500 flex-shrink-0" />
+                      Assista em {plan.screens}
+                    </li>
+                    {features.map((feature, i) => (
+                      <li key={i} className="flex items-center gap-2 text-xs sm:text-sm">
+                        <Check className="w-4 h-4 text-green-500 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <div className="text-center mb-4 sm:mb-6">
+                    <span className="text-muted-foreground text-xs sm:text-sm">Por</span>
+                    <div className="flex items-baseline justify-center gap-1">
+                      <span className="text-muted-foreground text-sm">{currencySymbol}</span>
+                      <span className="font-display text-3xl sm:text-5xl text-primary">{pricing.price}</span>
+                    </div>
+                    {pricing.installments && (
+                      <p className="text-xs text-muted-foreground mt-2">{pricing.installments}</p>
+                    )}
+                  </div>
+
+                  <a href={plan.link} target="_blank" rel="noopener noreferrer">
+                    <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-sm sm:text-base">
+                      TESTE GRÁTIS
+                    </Button>
+                  </a>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
+        </div>
+
+        {/* Payment Methods */}
+        <div className="mt-12 sm:mt-16 text-center">
+          <h3 className="text-xl sm:text-2xl font-display mb-6">Formas de Pagamento</h3>
+          <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-8">
+            {methods.map((method, index) => (
+              <div key={index} className="flex flex-col items-center gap-2">
+                <div className="bg-white rounded-xl p-3 sm:p-4 w-20 h-20 sm:w-24 sm:h-24 flex items-center justify-center">
+                  <img 
+                    src={method.image} 
+                    alt={method.name}
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+                <span className="text-xs sm:text-sm text-muted-foreground">{method.name}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
