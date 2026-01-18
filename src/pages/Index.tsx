@@ -1,3 +1,4 @@
+import { CountryProvider } from "@/contexts/CountryContext";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import LogosMarquee from "@/components/LogosMarquee";
@@ -14,21 +15,23 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <main className="min-h-screen bg-background">
-      <Header />
-      <HeroSection />
-      <LogosMarquee />
-      <VideoSection />
-      <ContentGallery />
-      <FeaturesSection />
-      <ReasonsSection />
-      <BenefitsFAQ />
-      <PricingComparison />
-      <PricingPlans />
-      <GuaranteeSection />
-      <FAQSection />
-      <Footer />
-    </main>
+    <CountryProvider>
+      <main className="min-h-screen bg-background">
+        <Header />
+        <HeroSection />
+        <LogosMarquee />
+        <VideoSection />
+        <ContentGallery />
+        <FeaturesSection />
+        <ReasonsSection />
+        <BenefitsFAQ />
+        <PricingComparison />
+        <PricingPlans />
+        <GuaranteeSection />
+        <FAQSection />
+        <Footer />
+      </main>
+    </CountryProvider>
   );
 };
 
