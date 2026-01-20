@@ -9,7 +9,7 @@ const paymentMethods = {
   ],
   mozambique: [
     { name: "M-Pesa", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/M-PESA_LOGO-01.svg/2560px-M-PESA_LOGO-01.svg.png" },
-    { name: "E-Mola", image: "https://play-lh.googleusercontent.com/2TGAhJ55tiyhCwW0ZM43deGv4lUTFTBMoq83mnAO6-bU5hi2NPyKX8BN8iKt13irK7Y=w240-h480-rw" }
+    { name: "E-Mola", image: "https://play-lh.googleusercontent.com/wqwKGhfMxCvX1Aw9g8sLJNv2L8f6x-NyQqQfEE8FFnJKZrZvTZvvFnCBYGEpVKhMKQ=w240-h480-rw" }
   ]
 };
 
