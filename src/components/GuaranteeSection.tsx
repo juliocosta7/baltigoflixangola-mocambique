@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Shield, MessageCircle } from "lucide-react";
+import { Shield } from "lucide-react";
 import { useCountry } from "@/contexts/CountryContext";
 
 const paymentMethods = {
@@ -58,14 +58,9 @@ const GuaranteeSection = () => {
             </div>
           </div>
 
-          <a 
-            href="https://wa.me/244954668786?text=Olá!%20Quero%20testar%20o%20BaltigoFlix" 
-            target="_blank" 
-            rel="noopener noreferrer"
-          >
-            <Button size="lg" className="w-full sm:w-auto bg-green-600 hover:bg-green-700 text-white font-bold text-base sm:text-lg px-8 sm:px-10 py-5 sm:py-6">
-              <MessageCircle className="w-5 h-5 mr-2" />
-              SUPORTE VIA WHATSAPP
+          <a href="#planos">
+            <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-base sm:text-lg px-8 sm:px-10 py-5 sm:py-6">
+              QUERO ADQUIRIR AGORA!
             </Button>
           </a>
         </div>

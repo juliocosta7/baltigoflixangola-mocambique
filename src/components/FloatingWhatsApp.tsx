@@ -1,0 +1,17 @@
+import { MessageCircle } from "lucide-react";
+
+const FloatingWhatsApp = () => {
+  return (
+    <a
+      href="https://wa.me/244954668786?text=Olá!%20Preciso%20de%20suporte%20BaltigoFlix"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-110 animate-pulse"
+      aria-label="Contactar via WhatsApp"
+    >
+      <MessageCircle className="w-7 h-7" />
+    </a>
+  );
+};
+
+export default FloatingWhatsApp;
