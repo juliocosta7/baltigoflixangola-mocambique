@@ -80,7 +80,7 @@ const PricingComparison = () => {
           </h3>
           <a href="#planos">
             <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-base sm:text-lg px-8 sm:px-10 py-5 sm:py-6">
-              TESTE GRÁTIS AGORA
+              COMPRAR AGORA
             </Button>
           </a>
         </div>

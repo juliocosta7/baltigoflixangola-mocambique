@@ -12,7 +12,12 @@ const Header = () => {
         
         <div className="flex items-center gap-2 sm:gap-4">
           <CountrySwitcher />
-          <a href="#planos" className="hidden sm:block">
+          <a 
+            href="https://wa.me/244954668786?text=Olá!%20Quero%20testar%20o%20BaltigoFlix" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="hidden sm:block"
+          >
             <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-sm sm:text-base">
               TESTE GRÁTIS
             </Button>

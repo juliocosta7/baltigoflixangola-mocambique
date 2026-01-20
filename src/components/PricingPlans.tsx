@@ -17,7 +17,7 @@ const planDetails = {
     duration: "Acesso de 3 meses",
     screens: "3 telas simultâneas",
     link: "https://pay.kambafy.com/checkout/e3df920e-4e56-4c77-baa4-9f08ca03e3fb",
-    popular: false
+    popular: true // TRIMESTRAL is now the most popular
   },
   semestral: {
     name: "semestral",
@@ -31,7 +31,7 @@ const planDetails = {
     duration: "Acesso de 1 ano",
     screens: "4 telas simultâneas",
     link: "https://pay.kambafy.com/checkout/e3df920e-4e56-4c77-baa4-9f08ca03e3fb",
-    popular: true
+    popular: false // No longer most popular
   }
 };
 
@@ -121,7 +121,7 @@ const PricingPlans = () => {
 
                   <a href={plan.link} target="_blank" rel="noopener noreferrer">
                     <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-sm sm:text-base">
-                      TESTE GRÁTIS
+                      COMPRAR AGORA
                     </Button>
                   </a>
                 </div>
