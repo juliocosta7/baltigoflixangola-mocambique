@@ -16,7 +16,7 @@ const benefits = [
   },
   {
     question: "Qual o prazo de entrega?",
-    answer: "Pagamentos via Multicaixa Express, Pagamento po Referência: acesso em minutos. Tranferência Bancaria: até 2 dias úteis."
+    answer: "Pagamentos via Multicaixa Express, por Referência e Transferência Bancária | Pagamento e-Mola e M-Pesa: acesso em minutos."
   }
 ];
 
