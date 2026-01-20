@@ -14,7 +14,7 @@ const faqs = [
   },
   {
     question: "O pagamento é mensal?",
-    answer: "Também. Atualmente temos quatro opções:\n\n– Plano Mensal: KZ 4625\n– Plano Trimestral: KZ 10.696\n– Plano Semestral: KZ 16.054\n– Plano Anual: KZ 23.125\n\nVocê escolhe a que melhor se adapta a você."
+    answer: "Também. Atualmente temos quatro opções:\n\n– Plano Mensal: KZ 4.625 | MT 334\n– Plano Trimestral: KZ 10.696 | MT 772\n– Plano Semestral: KZ 16.054 | MT 1.159\n– Plano Anual: KZ 23.125 | MT 1.670\n\nVocê escolhe a que melhor se adapta a você."
   },
   {
     question: "Em quantos aparelhos posso usar?",
