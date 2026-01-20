@@ -19,12 +19,12 @@ const HeroSection = () => {
         <div className="max-w-2xl">
           {/* Headline */}
           <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-4">
-            <span className="text-primary">BALTIGOFLIX</span> | <span className="text-foreground">ANGOLA-MOÇAMBIQUE</span>
+            <span className="text-primary">BALTIGOFLIX</span> | <span className="text-foreground">ANGOLA MOÇAMBIQUE</span>
           </h1>
 
           {/* Subheadline */}
           <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-6 sm:mb-8">
-            Filmes, Séries, Canais ao Vivo e Desporto em Alta Qualidade
+            A liberdade que sua TV merece. Sem mensalidade abusiva. Sem limites.
           </p>
 
           {/* Benefits list */}
