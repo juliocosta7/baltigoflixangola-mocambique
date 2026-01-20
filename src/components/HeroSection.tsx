@@ -19,7 +19,7 @@ const HeroSection = () => {
         <div className="max-w-2xl">
           {/* Headline */}
           <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-4">
-            <span className="text-primary">BALTIGOFLIX</span> | <span className="text-foreground">ANGOLA MOÇAMBIQUE</span>
+            <span className="text-primary">BALTIGOFLIX</span> | ANGOLA MOÇAMBIQUE<span className="text-foreground"></span>
           </h1>
 
           {/* Subheadline */}
@@ -47,7 +47,7 @@ const HeroSection = () => {
             </li>
             <li className="flex items-center gap-3">
               <Check className="w-5 h-5 text-green-500 flex-shrink-0" />
-              <span className="text-sm sm:text-base">Suporte em português</span>
+              <span className="text-sm sm:text-base">Instalação fácil e rápida</span>
             </li>
           </ul>
 
