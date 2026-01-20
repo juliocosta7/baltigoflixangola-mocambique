@@ -45,7 +45,7 @@ const Footer = () => {
           {/* Copyright */}
           <div className="mt-8 pt-8 border-t border-border/30">
             <p className="text-sm text-muted-foreground">
-              BaltigoFlix 2025 © Todos os direitos reservados
+              BaltigoFlix 2026 © Todos os direitos reservados
             </p>
           </div>
         </div>
