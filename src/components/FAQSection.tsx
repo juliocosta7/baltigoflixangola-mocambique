@@ -14,19 +14,19 @@ const faqs = [
   },
   {
     question: "O pagamento é mensal?",
-    answer: "Também. Atualmente temos quatro opções:\n\n– Plano Mensal: R$ 25,90\n– Plano Trimestral: R$ 59,90\n– Plano Semestral: R$ 89,90\n– Plano Anual: R$ 129,90\n\nVocê escolhe a que melhor se adapta a você."
+    answer: "Também. Atualmente temos quatro opções:\n\n– Plano Mensal: KZ 4625\n– Plano Trimestral: KZ 10.696\n– Plano Semestral: KZ 16.054\n– Plano Anual: KZ 23.125\n\nVocê escolhe a que melhor se adapta a você."
   },
   {
     question: "Em quantos aparelhos posso usar?",
-    answer: "Nosso plano padrão permite 3 telas simultâneas. Também oferecemos opções para quem deseja mais acessos."
+    answer: "Nosso plano padrão permite 2 telas simultâneas. Também oferecemos opções para quem deseja mais acessos."
   },
   {
     question: "Quantos canais são liberados?",
-    answer: "Você terá acesso a milhares de canais, incluindo canais abertos, fechados e conteúdos de Netflix, Amazon Prime, Disney+, Max, Globoplay, Premiere e muito mais — tudo em um só lugar!"
+    answer: "Você terá acesso a milhares de canais, incluindo canais abertos, fechados e conteúdos de Netflix, Amazon Prime, Disney+, HBO Max, Globoplay, Premiere e muito mais — tudo em um só lugar!"
   },
   {
     question: "Como vou receber o acesso?",
-    answer: "De forma imediata! Após a confirmação do pagamento, você receberá por e-mail:\n\n– ✅ Acesso à plataforma\n– ✅ Tutoriais completos para usar em qualquer aparelho"
+    answer: "De forma imediata! Após a confirmação do pagamento, você receberá por e-mail ou whatsapp:\n\n– ✅ Acesso à plataforma\n– ✅ Tutoriais completos para usar em qualquer aparelho"
   },
   {
     question: "Preciso de um especialista para configurar?",
@@ -39,7 +39,7 @@ const faqs = [
 ];
 
 const FAQSection = () => {
-  const whatsappSupport = "https://wa.me/+5567981030648";
+  const whatsappSupport = "https://wa.me/+244954668786";
 
   return (
     <section className="py-20 bg-gradient-hero">
