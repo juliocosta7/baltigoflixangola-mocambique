@@ -20,10 +20,10 @@ export const prices = {
     currency: 'KZ',
     symbol: 'KZ',
     plans: {
-      mensal: { price: '4.624', installments: null },
-      trimestral: { price: '10.696', installments: 'Ou 3x de KZ 3.565' },
-      semestral: { price: '16.054', installments: 'Ou 6x de KZ 2.676' },
-      anual: { price: '23.125', installments: 'Ou 12x de KZ 1.927' }
+      mensal: { price: '4.624' },
+      trimestral: { price: '10.696' },
+      semestral: { price: '16.054' },
+      anual: { price: '23.125' }
     },
     services: [
       { price: '10.696' },
@@ -49,10 +49,10 @@ export const prices = {
     currency: 'MZN',
     symbol: 'MT',
     plans: {
-      mensal: { price: '298', installments: null },
-      trimestral: { price: '690', installments: 'Ou 3x de MT 230' },
-      semestral: { price: '1.036', installments: 'Ou 6x de MT 173' },
-      anual: { price: '1.492', installments: 'Ou 12x de MT 124' }
+      mensal: { price: '298' },
+      trimestral: { price: '690' },
+      semestral: { price: '1.036' },
+      anual: { price: '1.492' }
     },
     services: [
       { price: '690' },

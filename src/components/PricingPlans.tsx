@@ -114,9 +114,6 @@ const PricingPlans = () => {
                       <span className="text-muted-foreground text-sm">{currencySymbol}</span>
                       <span className="font-display text-3xl sm:text-5xl text-primary">{pricing.price}</span>
                     </div>
-                    {pricing.installments && (
-                      <p className="text-xs text-muted-foreground mt-2">{pricing.installments}</p>
-                    )}
                   </div>
 
                   <a href={plan.link} target="_blank" rel="noopener noreferrer">
