@@ -9,16 +9,7 @@ const Footer = () => {
             <span className="text-primary">FLIX</span>
           </div>
 
-          {/* Payment methods */}
-          <div className="mb-8">
-            <h3 className="font-display text-xl mb-4">Formas de pagamento</h3>
-            <img 
-              src="https://fireplaytv.com/wp-content/uploads/2025/06/FORMA-DE-PAGAMENTO.webp" 
-              alt="Formas de pagamento"
-              className="max-w-sm mx-auto"
-            />
-          </div>
-
+          
           {/* Security */}
           <div className="mb-8">
             <h3 className="font-display text-xl mb-4">Site seguro</h3>
