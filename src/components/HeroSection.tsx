@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
-import heroBanner from "@/assets/hero-banner-new.jpg";
+import heroBanner from "@/assets/hero-banner-new.png";
 
 const HeroSection = () => {
   return (
@@ -11,29 +11,20 @@ const HeroSection = () => {
           className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${heroBanner})` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a12] via-[#0a0a12]/80 to-[#0a0a12]/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a12] via-[#0a0a12]/60 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a12] via-transparent to-transparent" />
       </div>
 
       <div className="relative z-10 container mx-auto px-4 py-12 sm:py-20">
         <div className="max-w-2xl">
-          {/* Flags */}
-          <div className="flex items-center gap-4 mb-6">
-            <span className="text-4xl sm:text-5xl">🇦🇴</span>
-            <span className="text-4xl sm:text-5xl">🇲🇿</span>
-          </div>
-
           {/* Headline */}
-          <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-2">
-            <span className="text-primary">BaltigoFlix</span> - O Melhor IPTV
+          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-4">
+            <span className="text-primary">BALTIGOFLIX</span> | <span className="text-foreground">ANGOLA-MOÇAMBIQUE</span>
           </h1>
-          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl mb-4">
-            para Angola e Moçambique
-          </h2>
 
           {/* Subheadline */}
           <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-6 sm:mb-8">
-            A liberdade que a sua TV merece. Sem mensalidades abusivas. Sem limites.
+            Filmes, Séries, Canais ao Vivo e Desporto em Alta Qualidade
           </p>
 
           {/* Benefits list */}
@@ -61,7 +52,7 @@ const HeroSection = () => {
           </ul>
 
           {/* CTA Button */}
-          <a href="#planos">
+          <a href="https://wa.me/244954668786?text=Olá!%20Quero%20testar%20o%20BaltigoFlix" target="_blank" rel="noopener noreferrer">
             <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-base sm:text-lg px-8 sm:px-10 py-5 sm:py-6">
               TESTE GRÁTIS
             </Button>
