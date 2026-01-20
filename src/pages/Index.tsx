@@ -1,4 +1,4 @@
-import { CountryProvider } from "@/contexts/CountryContext";
+import { useCountry } from "@/contexts/CountryContext";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import LogosMarquee from "@/components/LogosMarquee";
@@ -14,24 +14,24 @@ import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
+  const { country } = useCountry();
+  
   return (
-    <CountryProvider>
-      <main className="min-h-screen bg-background">
-        <Header />
-        <HeroSection />
-        <LogosMarquee />
-        <VideoSection />
-        <ContentGallery />
-        <FeaturesSection />
-        <ReasonsSection />
-        <BenefitsFAQ />
-        <PricingComparison />
-        <PricingPlans />
-        <GuaranteeSection />
-        <FAQSection />
-        <Footer />
-      </main>
-    </CountryProvider>
+    <main className={`min-h-screen bg-background ${country === 'mozambique' ? 'theme-mozambique' : 'theme-angola'}`}>
+      <Header />
+      <HeroSection />
+      <LogosMarquee />
+      <VideoSection />
+      <ContentGallery />
+      <FeaturesSection />
+      <ReasonsSection />
+      <BenefitsFAQ />
+      <PricingComparison />
+      <PricingPlans />
+      <GuaranteeSection />
+      <FAQSection />
+      <Footer />
+    </main>
   );
 };
 
