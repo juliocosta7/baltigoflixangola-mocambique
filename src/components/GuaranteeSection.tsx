@@ -6,11 +6,11 @@ const paymentMethods = {
   angola: [
     { name: "Multicaixa Express", image: "https://play-lh.googleusercontent.com/bHK3-NthxC6JYI3wV9eDq1f1LHJDxz5P-lnqjHAKJD4sU1QpR0rTuF9KVqg9JKq4rQ=w240-h480-rw" },
     { name: "Transferência Bancária", image: "https://cdn-icons-png.flaticon.com/512/2830/2830284.png" }
-  ],
+  ],https://apps.apple.com/br/app/e-mola/id1484826743
   mozambique: [
     { name: "M-Pesa", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/M-PESA_LOGO-01.svg/2560px-M-PESA_LOGO-01.svg.png" },
-    { name: "E-Mola", image: "https://play-lh.googleusercontent.com/wqwKGhfMxCvX1Aw9g8sLJNv2L8f6x-NyQqQfEE8FFnJKZrZvTZvvFnCBYGEpVKhMKQ=w240-h480-rw" }
-  ]
+    { name: "E-Mola", image: "https://apps.apple.com/br/app/e-mola/id1484826743" }
+  ]https://play-lh.googleusercontent.com/wqwKGhfMxCvX1Aw9g8sLJNv2L8f6x-NyQqQfEE8FFnJKZrZvTZvvFnCBYGEpVKhMKQ=w240-h480-rw
 };
 
 const GuaranteeSection = () => {
