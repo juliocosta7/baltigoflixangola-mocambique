@@ -8,7 +8,7 @@ const planDetails = {
   mensal: {
     name: "mensal",
     duration: "Acesso de 1 mês",
-    screens: "3 telas simultâneas",
+    screens: "2 telas simultâneas",
     link: "https://pay.kambafy.com/checkout/e3df920e-4e56-4c77-baa4-9f08ca03e3fb",
     popular: false
   },
