@@ -12,7 +12,7 @@ interface CountryContextType {
 const CountryContext = createContext<CountryContextType | undefined>(undefined);
 
 // New prices as specified:
-// Angola: Mensal KZ 4.624, Trimestral KZ 10.696, Semestral KZ 16.054, Anual KZ 23.125
+// Angola: Mensal KZ 4.625, Trimestral KZ 10.696, Semestral KZ 16.054, Anual KZ 23.125
 // Mozambique: Converted to MT (approximate rate KZ/MT = 15.5)
 
 export const prices = {
@@ -20,7 +20,7 @@ export const prices = {
     currency: 'KZ',
     symbol: 'KZ',
     plans: {
-      mensal: { price: '4.624' },
+      mensal: { price: '4.625' },
       trimestral: { price: '10.696' },
       semestral: { price: '16.054' },
       anual: { price: '23.125' }
@@ -49,10 +49,10 @@ export const prices = {
     currency: 'MZN',
     symbol: 'MT',
     plans: {
-      mensal: { price: '298' },
-      trimestral: { price: '690' },
-      semestral: { price: '1.036' },
-      anual: { price: '1.492' }
+      mensal: { price: '334' },
+      trimestral: { price: '772' },
+      semestral: { price: '1.159' },
+      anual: { price: '1670' }
     },
     services: [
       { price: '690' },
@@ -71,7 +71,7 @@ export const prices = {
     totalBaltigoflix: '124',
     comparison: {
       othersTotal: 'MT 5.483',
-      baltigoflixTotal: 'MT 1.492'
+      baltigoflixTotal: 'MT 3 935'
     }
   }
 };
