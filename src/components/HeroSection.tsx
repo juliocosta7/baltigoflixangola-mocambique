@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
-import heroBanner from "@/assets/hero-banner-new.png";
+import heroBanner from "@/assets/hero-banner-angola-mozambique.png";
 
 const HeroSection = () => {
   return (
