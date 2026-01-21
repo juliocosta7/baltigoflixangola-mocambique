@@ -36,30 +36,30 @@ const reasons = [
 
 const ReasonsSection = () => {
   return (
-    <section className="py-20 bg-background">
+    <section className="py-12 sm:py-20 bg-background">
       <div className="container mx-auto px-4">
-        <h2 className="font-display text-4xl md:text-5xl text-center mb-12">
+        <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-center mb-8 sm:mb-12 px-2">
           Veja os motivos pra adquirir sua <span className="text-primary">BaltigoFlix</span>
         </h2>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto">
           {reasons.map((reason, index) => (
             <div 
               key={index}
-              className="bg-gradient-card p-6 rounded-xl border border-border/50 hover:border-primary/50 transition-all group"
+              className="bg-gradient-card p-4 sm:p-6 rounded-xl border border-border/50 hover:border-primary/50 transition-all group"
             >
-              <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center mb-4 group-hover:bg-primary/30 transition-colors">
-                <reason.icon className="w-6 h-6 text-primary" />
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-primary/20 flex items-center justify-center mb-3 sm:mb-4 group-hover:bg-primary/30 transition-colors">
+                <reason.icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
               </div>
-              <h3 className="font-display text-xl mb-2">{reason.title}</h3>
-              <p className="text-muted-foreground text-sm">{reason.description}</p>
+              <h3 className="font-display text-lg sm:text-xl mb-2">{reason.title}</h3>
+              <p className="text-muted-foreground text-xs sm:text-sm">{reason.description}</p>
             </div>
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        <div className="text-center mt-8 sm:mt-12 px-4">
           <a href="#planos">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-10 py-6">
+            <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-base sm:text-lg px-8 sm:px-10 py-5 sm:py-6">
               Quero adquirir agora!
             </Button>
           </a>
