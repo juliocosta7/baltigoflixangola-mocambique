@@ -22,24 +22,24 @@ const benefits = [
 
 const BenefitsFAQ = () => {
   return (
-    <section className="py-20 bg-gradient-hero">
+    <section className="py-12 sm:py-20 bg-gradient-hero">
       <div className="container mx-auto px-4">
-        <h2 className="font-display text-4xl md:text-5xl text-center mb-12">
+        <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-center mb-8 sm:mb-12 px-2">
           Com a BaltigoFlix você só tem <span className="text-primary">benefícios!</span>
         </h2>
 
         <div className="max-w-3xl mx-auto">
-          <Accordion type="single" collapsible className="space-y-4">
+          <Accordion type="single" collapsible className="space-y-3 sm:space-y-4">
             {benefits.map((item, index) => (
               <AccordionItem 
                 key={index} 
                 value={`item-${index}`}
-                className="bg-gradient-card border border-border/50 rounded-xl px-6 data-[state=open]:border-primary/50"
+                className="bg-gradient-card border border-border/50 rounded-xl px-4 sm:px-6 data-[state=open]:border-primary/50"
               >
-                <AccordionTrigger className="font-display text-xl hover:no-underline hover:text-primary py-6">
+                <AccordionTrigger className="font-display text-lg sm:text-xl hover:no-underline hover:text-primary py-4 sm:py-6 text-left">
                   {item.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground pb-6">
+                <AccordionContent className="text-muted-foreground pb-4 sm:pb-6 text-sm sm:text-base">
                   {item.answer}
                 </AccordionContent>
               </AccordionItem>

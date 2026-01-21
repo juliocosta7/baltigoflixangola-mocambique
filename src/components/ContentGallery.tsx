@@ -28,25 +28,25 @@ const series = [
 
 const ContentGallery = () => {
   return (
-    <section className="py-20 bg-background overflow-hidden">
+    <section className="py-12 sm:py-20 bg-background overflow-hidden">
       <div className="container mx-auto px-4">
-        <h2 className="font-display text-4xl md:text-5xl text-center mb-4">
+        <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-center mb-4">
           Conteúdo premium para todos os gostos
         </h2>
-        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+        <p className="text-center text-muted-foreground mb-8 sm:mb-12 max-w-2xl mx-auto text-sm sm:text-base px-4">
           Explore nossa extensa biblioteca de filmes e séries. De blockbusters a produções premiadas, temos o melhor conteúdo para sua diversão.
         </p>
       </div>
 
       {/* Filmes Marquee */}
-      <div className="mb-6 overflow-hidden">
+      <div className="mb-4 sm:mb-6 overflow-hidden">
         <div className="flex animate-marquee">
           {[...filmes, ...filmes].map((src, index) => (
-            <div key={index} className="flex-shrink-0 mx-2">
+            <div key={index} className="flex-shrink-0 mx-1 sm:mx-2">
               <img 
                 src={src} 
                 alt={`Filme ${index + 1}`}
-                className="h-48 md:h-64 w-auto rounded-lg hover:scale-105 transition-transform"
+                className="h-32 sm:h-48 md:h-64 w-auto rounded-lg hover:scale-105 transition-transform"
               />
             </div>
           ))}
@@ -57,20 +57,20 @@ const ContentGallery = () => {
       <div className="overflow-hidden">
         <div className="flex animate-marquee-reverse">
           {[...series, ...series].map((src, index) => (
-            <div key={index} className="flex-shrink-0 mx-2">
+            <div key={index} className="flex-shrink-0 mx-1 sm:mx-2">
               <img 
                 src={src} 
                 alt={`Série ${index + 1}`}
-                className="h-48 md:h-64 w-auto rounded-lg hover:scale-105 transition-transform"
+                className="h-32 sm:h-48 md:h-64 w-auto rounded-lg hover:scale-105 transition-transform"
               />
             </div>
           ))}
         </div>
       </div>
 
-      <div className="text-center mt-12">
+      <div className="text-center mt-8 sm:mt-12 px-4">
         <a href="#planos">
-          <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-10 py-6">
+          <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-base sm:text-lg px-8 sm:px-10 py-5 sm:py-6">
             Quero adquirir agora!
           </Button>
         </a>
