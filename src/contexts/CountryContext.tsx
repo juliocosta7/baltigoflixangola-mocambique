@@ -52,7 +52,7 @@ export const prices = {
       mensal: { price: '334' },
       trimestral: { price: '772' },
       semestral: { price: '1.159' },
-      anual: { price: '1670' }
+      anual: { price: '1.670' }
     },
     services: [
       { price: '690' },
@@ -71,7 +71,7 @@ export const prices = {
     totalBaltigoflix: '124',
     comparison: {
       othersTotal: 'MT 5.483',
-      baltigoflixTotal: 'MT 3 935'
+      baltigoflixTotal: 'MT 3.935'
     }
   }
 };
