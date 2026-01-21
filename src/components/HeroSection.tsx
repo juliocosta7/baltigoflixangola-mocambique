@@ -4,14 +4,17 @@ import heroBanner from "@/assets/hero-banner-angola-mozambique.png";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0a0a12] pt-20">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0a0a12] pt-16 sm:pt-20">
       {/* Background with banner image */}
       <div className="absolute inset-0">
         <div 
-          className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 w-full h-full bg-contain sm:bg-cover bg-top sm:bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${heroBanner})` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a12] via-[#0a0a12]/60 to-transparent" />
+        {/* Mobile: gradient from bottom to show flags at top */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a12] via-[#0a0a12]/80 to-transparent sm:hidden" />
+        {/* Desktop: gradient from left */}
+        <div className="hidden sm:block absolute inset-0 bg-gradient-to-r from-[#0a0a12] via-[#0a0a12]/60 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a12] via-transparent to-transparent" />
       </div>
 
