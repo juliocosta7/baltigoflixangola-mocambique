@@ -22,42 +22,42 @@ const HeroSection = () => {
         <div className="max-w-2xl">
           {/* Headline */}
           <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-4">
-            <span className="text-primary">BALTIGOFLIX </span><span className="text-foreground">ANGOLA MOÇAMBIQUE</span>
+            <span className="text-primary">Entretenimento</span> <span className="text-foreground">ilimitado</span>
           </h1>
 
           {/* Subheadline */}
           <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-6 sm:mb-8">
-            A liberdade que sua TV merece. Sem mensalidade abusiva. Sem limites.
+            Filmes, séries, desporto e muito mais. Assista onde quiser. Cancele quando quiser.
           </p>
 
           {/* Benefits list */}
           <ul className="space-y-2 sm:space-y-3 mb-8 sm:mb-10">
             <li className="flex items-center gap-3">
               <Check className="w-5 h-5 text-green-500 flex-shrink-0" />
-              <span className="text-sm sm:text-base">+10.000 canais abertos e fechados</span>
+              <span className="text-sm sm:text-base">Mais de 10.000 canais em direto</span>
             </li>
             <li className="flex items-center gap-3">
               <Check className="w-5 h-5 text-green-500 flex-shrink-0" />
-              <span className="text-sm sm:text-base">+40.000 filmes e séries</span>
+              <span className="text-sm sm:text-base">Mais de 40.000 filmes e séries</span>
             </li>
             <li className="flex items-center gap-3">
               <Check className="w-5 h-5 text-green-500 flex-shrink-0" />
-              <span className="text-sm sm:text-base">Jogos ao vivo, sem atraso</span>
+              <span className="text-sm sm:text-base">Desporto em direto sem atraso</span>
             </li>
             <li className="flex items-center gap-3">
               <Check className="w-5 h-5 text-green-500 flex-shrink-0" />
-              <span className="text-sm sm:text-base">Funciona com internet fraca</span>
+              <span className="text-sm sm:text-base">Funciona com internet lenta</span>
             </li>
             <li className="flex items-center gap-3">
               <Check className="w-5 h-5 text-green-500 flex-shrink-0" />
-              <span className="text-sm sm:text-base">Instalação fácil e rápida</span>
+              <span className="text-sm sm:text-base">Configuração rápida e simples</span>
             </li>
           </ul>
 
           {/* CTA Button */}
           <a href="https://wa.me/244954668786?text=Olá!%20Quero%20testar%20o%20BaltigoFlix" target="_blank" rel="noopener noreferrer">
             <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-base sm:text-lg px-8 sm:px-10 py-5 sm:py-6">
-              TESTE GRÁTIS
+              COMEÇAR
             </Button>
           </a>
         </div>
