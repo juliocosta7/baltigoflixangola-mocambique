@@ -52,7 +52,7 @@ const paymentMethods = {
   ],
   mozambique: [
     { name: "Cartão Visa/Mastercard", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1280px-Mastercard-logo.svg.png" },
-    { name: "e-Mola", image: "https://play-lh.googleusercontent.com/wqwKGhfMxCvX1Aw9g8sLJNv2L8f6x-NyQqQfEE8FFnJKZrZvTZvvFnCBYGEpVKhMKQ=w240-h480-rw" },
+    { name: "e-Mola", image: "https://github.com/juliocosta7/baltigoflixangola-mocambique/blob/main/src/assets/e-mola.png" },
     { name: "M-Pesa", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/M-PESA_LOGO-01.svg/2560px-M-PESA_LOGO-01.svg.png" }
   ]
 };
