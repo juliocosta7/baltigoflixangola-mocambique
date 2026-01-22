@@ -3,18 +3,18 @@ import { Check } from "lucide-react";
 import { useCountry, prices } from "@/contexts/CountryContext";
 import transferenciaImg from "@/assets/transferencia-bancaria.png";
 
-const planKeys = ['Mensal', 'Trimestral', 'Semestral', 'Anual'] as const;
+const planKeys = ['mensal', 'trimestral', 'semestral', 'anual'] as const;
 
 const planDetails = {
-  Mensal: {
-    name: "Mensal",
+  mensal: {
+    name: "mensal",
     duration: "Acesso de 1 mês",
     screens: "2 telas simultâneas",
     link: "https://pay.kambafy.com/checkout/e3df920e-4e56-4c77-baa4-9f08ca03e3fb",
     popular: false
   },
-  Trimestral: {
-    name: "Trimestral",
+  trimestral: {
+    name: "trimestral",
     duration: "Acesso de 3 meses",
     screens: "3 telas simultâneas",
     link: "https://pay.kambafy.com/checkout/e3df920e-4e56-4c77-baa4-9f08ca03e3fb",
