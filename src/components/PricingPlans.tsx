@@ -46,7 +46,7 @@ const features = [
 // Placeholder images - will be replaced when user uploads actual images
 const paymentMethods = {
   angola: [
-    { name: "Multicaixa Express", image: "https://play-lh.googleusercontent.com/bHK3-NthxC6JYI3wV9eDq1f1LHJDxz5P-lnqjHAKJD4sU1QpR0rTuF9KVqg9JKq4rQ=w240-h480-rw" },
+    { name: "Multicaixa Express", image: "src/assets/express.png" },
     { name: "Pagamento por Referência", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Multicaixa_logo.svg/1200px-Multicaixa_logo.svg.png" },
     { name: "Transferência Bancária", image: transferenciaImg }
   ],
