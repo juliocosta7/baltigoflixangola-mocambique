@@ -7,52 +7,53 @@ const planKeys = ['mensal', 'trimestral', 'semestral', 'anual'] as const;
 
 const planDetails = {
   mensal: {
-    name: "Básico",
-    duration: "1 mês de acesso",
-    screens: "2 ecrãs",
+    name: "mensal",
+    duration: "Acesso de 1 mês",
+    screens: "2 telas simultâneas",
     link: "https://pay.kambafy.com/checkout/e3df920e-4e56-4c77-baa4-9f08ca03e3fb",
     popular: false
   },
   trimestral: {
-    name: "Padrão",
-    duration: "3 meses de acesso",
-    screens: "3 ecrãs",
+    name: "trimestral",
+    duration: "Acesso de 3 meses",
+    screens: "3 telas simultâneas",
     link: "https://pay.kambafy.com/checkout/e3df920e-4e56-4c77-baa4-9f08ca03e3fb",
     popular: true
   },
   semestral: {
-    name: "Premium",
-    duration: "6 meses de acesso",
-    screens: "3 ecrãs",
+    name: "semestral",
+    duration: "Acesso de 6 meses",
+    screens: "3 telas simultâneas",
     link: "https://pay.kambafy.com/checkout/e3df920e-4e56-4c77-baa4-9f08ca03e3fb",
     popular: false
   },
   anual: {
-    name: "Ultra",
-    duration: "12 meses de acesso",
-    screens: "4 ecrãs",
+    name: "anual",
+    duration: "Acesso de 1 ano",
+    screens: "4 telas simultâneas",
     link: "https://pay.kambafy.com/checkout/e3df920e-4e56-4c77-baa4-9f08ca03e3fb",
     popular: false
   }
 };
 
 const features = [
-  "Mais de 40 mil títulos",
-  "Canais adultos (opcional)",
-  "Qualidade até 4K Ultra HD",
-  "Assista em qualquer dispositivo"
+  "+ de 40 mil conteúdos",
+  "Canais Adultos (opcional)",
+  "Qualidade SD/HD/FHD/4K",
+  "Assista na Smart Tv, Tablet, Smartphone, TV Box ou Computador."
 ];
 
+// Placeholder images - will be replaced when user uploads actual images
 const paymentMethods = {
   angola: [
-    { name: "Multicaixa Express", image: "https://i.imgur.com/QwYBW9k.png" },
-    { name: "Pagamento por Referência", image: "https://i.imgur.com/8rGBdYt.png" },
+    { name: "Multicaixa Express", image: "https://play-lh.googleusercontent.com/bHK3-NthxC6JYI3wV9eDq1f1LHJDxz5P-lnqjHAKJD4sU1QpR0rTuF9KVqg9JKq4rQ=w240-h480-rw" },
+    { name: "Pagamento por Referência", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Multicaixa_logo.svg/1200px-Multicaixa_logo.svg.png" },
     { name: "Transferência Bancária", image: transferenciaImg }
   ],
   mozambique: [
-    { name: "Cartão Visa/Mastercard", image: "https://i.imgur.com/4CkTl5x.png" },
-    { name: "e-Mola", image: "https://i.imgur.com/5xvF8vR.png" },
-    { name: "M-Pesa", image: "https://i.imgur.com/KpVq9ZI.png" }
+    { name: "Cartão Visa/Mastercard", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1280px-Mastercard-logo.svg.png" },
+    { name: "e-Mola", image: "https://play-lh.googleusercontent.com/wqwKGhfMxCvX1Aw9g8sLJNv2L8f6x-NyQqQfEE8FFnJKZrZvTZvvFnCBYGEpVKhMKQ=w240-h480-rw" },
+    { name: "M-Pesa", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/M-PESA_LOGO-01.svg/2560px-M-PESA_LOGO-01.svg.png" }
   ]
 };
 
@@ -65,11 +66,8 @@ const PricingPlans = () => {
     <section id="planos" className="py-12 sm:py-20 bg-gradient-hero scroll-mt-20">
       <div className="container mx-auto px-4">
         <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-center mb-4">
-          Escolha o plano ideal para si
+          Aproveite esta <span className="text-primary">oportunidade única!</span>
         </h2>
-        <p className="text-muted-foreground text-center text-base sm:text-lg max-w-2xl mx-auto mb-8">
-          Assista onde quiser. Cancele quando quiser.
-        </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mt-8 sm:mt-12">
           {planKeys.map((key) => {
@@ -93,7 +91,7 @@ const PricingPlans = () => {
                 
                 <div className={`p-4 sm:p-6 ${plan.popular ? 'pt-10' : ''}`}>
                   <div className="text-center mb-4 sm:mb-6">
-                    <span className="text-muted-foreground text-xs sm:text-sm uppercase tracking-wider">PLANO</span>
+                    <span className="text-muted-foreground text-xs sm:text-sm uppercase">PLANO</span>
                     <h3 className="font-display text-2xl sm:text-3xl mt-1">{plan.name}</h3>
                   </div>
 
@@ -115,7 +113,7 @@ const PricingPlans = () => {
                   </ul>
 
                   <div className="text-center mb-4 sm:mb-6">
-                    <span className="text-muted-foreground text-xs sm:text-sm">A partir de</span>
+                    <span className="text-muted-foreground text-xs sm:text-sm">Por</span>
                     <div className="flex items-baseline justify-center gap-1">
                       <span className="text-muted-foreground text-sm">{currencySymbol}</span>
                       <span className="font-display text-3xl sm:text-5xl text-primary">{pricing.price}</span>
@@ -123,8 +121,8 @@ const PricingPlans = () => {
                   </div>
 
                   <a href={plan.link} target="_blank" rel="noopener noreferrer">
-                    <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-sm sm:text-base">
-                      COMEÇAR
+                    <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-sm sm:text-base transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/30 active:scale-95">
+                      COMPRAR AGORA
                     </Button>
                   </a>
                 </div>
@@ -135,11 +133,11 @@ const PricingPlans = () => {
 
         {/* Payment Methods */}
         <div className="mt-12 sm:mt-16 text-center">
-          <h3 className="text-xl sm:text-2xl font-display mb-6">Formas de Pagamento Aceites</h3>
+          <h3 className="text-xl sm:text-2xl font-display mb-6">Formas de Pagamento</h3>
           <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-8">
             {methods.map((method, index) => (
-              <div key={index} className="flex flex-col items-center gap-2">
-                <div className="bg-white rounded-xl p-3 sm:p-4 w-20 h-20 sm:w-24 sm:h-24 flex items-center justify-center">
+              <div key={index} className="flex flex-col items-center gap-2 transition-transform duration-300 hover:scale-110">
+                <div className="bg-white rounded-xl p-3 sm:p-4 w-20 h-20 sm:w-24 sm:h-24 flex items-center justify-center shadow-md">
                   <img 
                     src={method.image} 
                     alt={method.name}
