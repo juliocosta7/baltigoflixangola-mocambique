@@ -1,19 +1,25 @@
-import { Button } from "@/components/ui/button";
 import { Shield } from "lucide-react";
 import { useCountry } from "@/contexts/CountryContext";
-import transferenciaImg from "@/assets/transferencia-bancaria.png";
 
-// Placeholder images - will be replaced when user uploads actual images
+// Import payment method images
+import expressImg from "@/assets/express.png";
+import referenciaImg from "@/assets/referencia.png";
+import transferenciaImg from "@/assets/tranferencia.png";
+import visaImg from "@/assets/visa.png";
+import eMolaImg from "@/assets/e-mola.png";
+import mPesaImg from "@/assets/m-pesa.png";
+
+// Payment methods with imported images
 const paymentMethods = {
   angola: [
-    { name: "Multicaixa Express", image: "https://play-lh.googleusercontent.com/bHK3-NthxC6JYI3wV9eDq1f1LHJDxz5P-lnqjHAKJD4sU1QpR0rTuF9KVqg9JKq4rQ=w240-h480-rw" },
-    { name: "Pagamento por Referência", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Multicaixa_logo.svg/1200px-Multicaixa_logo.svg.png" },
+    { name: "Multicaixa Express", image: expressImg },
+    { name: "Pagamento por Referência", image: referenciaImg },
     { name: "Transferência Bancária", image: transferenciaImg }
   ],
   mozambique: [
-    { name: "Cartão Visa/Mastercard", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1280px-Mastercard-logo.svg.png" },
-    { name: "e-Mola", image: "https://play-lh.googleusercontent.com/wqwKGhfMxCvX1Aw9g8sLJNv2L8f6x-NyQqQfEE8FFnJKZrZvTZvvFnCBYGEpVKhMKQ=w240-h480-rw" },
-    { name: "M-Pesa", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/M-PESA_LOGO-01.svg/2560px-M-PESA_LOGO-01.svg.png" }
+    { name: "Cartão Visa/Mastercard", image: visaImg },
+    { name: "e-Mola", image: eMolaImg },
+    { name: "M-Pesa", image: mPesaImg }
   ]
 };
 
@@ -48,8 +54,11 @@ const GuaranteeSection = () => {
             <h3 className="text-lg sm:text-xl font-display mb-4">Formas de Pagamento</h3>
             <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6">
               {methods.map((method, index) => (
-                <div key={index} className="flex flex-col items-center gap-2 transition-transform duration-300 hover:scale-110">
-                  <div className="bg-white rounded-xl p-2 sm:p-3 w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center shadow-md">
+                <div 
+                  key={index} 
+                  className="flex flex-col items-center gap-2 transition-all duration-300 hover:scale-110 hover:-translate-y-1"
+                >
+                  <div className="bg-white rounded-xl p-2 sm:p-3 w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center shadow-md hover:shadow-xl transition-shadow duration-300">
                     <img 
                       src={method.image} 
                       alt={method.name}
@@ -63,15 +72,9 @@ const GuaranteeSection = () => {
           </div>
 
           <a href="#planos">
-            <Button 
-              size="lg" 
-              className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-base sm:text-lg px-8 sm:px-10 py-5 sm:py-6
-                transition-all duration-300 
-                hover:scale-105 hover:shadow-xl hover:shadow-primary/40 
-                active:scale-95"
-            >
+            <button className="btn-premium text-base sm:text-lg px-8 sm:px-12 py-4 sm:py-5">
               QUERO ADQUIRIR AGORA!
-            </Button>
+            </button>
           </a>
         </div>
       </div>

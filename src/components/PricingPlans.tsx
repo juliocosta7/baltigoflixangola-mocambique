@@ -1,34 +1,40 @@
-import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
 import { useCountry, prices } from "@/contexts/CountryContext";
-import transferenciaImg from "@/assets/transferencia-bancaria.png";
+
+// Import payment method images
+import expressImg from "@/assets/express.png";
+import referenciaImg from "@/assets/referencia.png";
+import transferenciaImg from "@/assets/tranferencia.png";
+import visaImg from "@/assets/visa.png";
+import eMolaImg from "@/assets/e-mola.png";
+import mPesaImg from "@/assets/m-pesa.png";
 
 const planKeys = ['mensal', 'trimestral', 'semestral', 'anual'] as const;
 
 const planDetails = {
   mensal: {
-    name: "mensal",
+    name: "Mensal",
     duration: "Acesso de 1 mês",
     screens: "2 telas simultâneas",
     link: "https://pay.kambafy.com/checkout/e3df920e-4e56-4c77-baa4-9f08ca03e3fb",
     popular: false
   },
   trimestral: {
-    name: "trimestral",
+    name: "Trimestral",
     duration: "Acesso de 3 meses",
     screens: "3 telas simultâneas",
     link: "https://pay.kambafy.com/checkout/e3df920e-4e56-4c77-baa4-9f08ca03e3fb",
     popular: true
   },
   semestral: {
-    name: "semestral",
+    name: "Semestral",
     duration: "Acesso de 6 meses",
     screens: "3 telas simultâneas",
     link: "https://pay.kambafy.com/checkout/e3df920e-4e56-4c77-baa4-9f08ca03e3fb",
     popular: false
   },
   anual: {
-    name: "anual",
+    name: "Anual",
     duration: "Acesso de 1 ano",
     screens: "4 telas simultâneas",
     link: "https://pay.kambafy.com/checkout/e3df920e-4e56-4c77-baa4-9f08ca03e3fb",
@@ -43,17 +49,17 @@ const features = [
   "Assista na Smart Tv, Tablet, Smartphone, TV Box ou Computador."
 ];
 
-// Placeholder images - will be replaced when user uploads actual images
+// Payment methods with imported images
 const paymentMethods = {
   angola: [
-    { name: "Multicaixa Express", image: "src/assets/express.png" },
-    { name: "Pagamento por Referência", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Multicaixa_logo.svg/1200px-Multicaixa_logo.svg.png" },
+    { name: "Multicaixa Express", image: expressImg },
+    { name: "Pagamento por Referência", image: referenciaImg },
     { name: "Transferência Bancária", image: transferenciaImg }
   ],
   mozambique: [
-    { name: "Cartão Visa/Mastercard", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1280px-Mastercard-logo.svg.png" },
-    { name: "e-Mola", image: "https://github.com/juliocosta7/baltigoflixangola-mocambique/blob/main/src/assets/e-mola.png" },
-    { name: "M-Pesa", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/M-PESA_LOGO-01.svg/2560px-M-PESA_LOGO-01.svg.png" }
+    { name: "Cartão Visa/Mastercard", image: visaImg },
+    { name: "e-Mola", image: eMolaImg },
+    { name: "M-Pesa", image: mPesaImg }
   ]
 };
 
@@ -77,7 +83,7 @@ const PricingPlans = () => {
             return (
               <div 
                 key={key}
-                className={`relative bg-gradient-card rounded-2xl border overflow-hidden ${
+                className={`relative bg-gradient-card rounded-2xl border overflow-hidden transition-transform duration-300 hover:scale-[1.02] ${
                   plan.popular 
                     ? 'border-primary shadow-fire' 
                     : 'border-border/50'
@@ -121,9 +127,9 @@ const PricingPlans = () => {
                   </div>
 
                   <a href={plan.link} target="_blank" rel="noopener noreferrer">
-                    <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-sm sm:text-base transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/30 active:scale-95">
+                    <button className="btn-card">
                       COMPRAR AGORA
-                    </Button>
+                    </button>
                   </a>
                 </div>
               </div>
@@ -136,8 +142,11 @@ const PricingPlans = () => {
           <h3 className="text-xl sm:text-2xl font-display mb-6">Formas de Pagamento</h3>
           <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-8">
             {methods.map((method, index) => (
-              <div key={index} className="flex flex-col items-center gap-2 transition-transform duration-300 hover:scale-110">
-                <div className="bg-white rounded-xl p-3 sm:p-4 w-20 h-20 sm:w-24 sm:h-24 flex items-center justify-center shadow-md">
+              <div 
+                key={index} 
+                className="flex flex-col items-center gap-2 transition-all duration-300 hover:scale-110 hover:-translate-y-1"
+              >
+                <div className="bg-white rounded-xl p-3 sm:p-4 w-20 h-20 sm:w-24 sm:h-24 flex items-center justify-center shadow-md hover:shadow-xl transition-shadow duration-300">
                   <img 
                     src={method.image} 
                     alt={method.name}

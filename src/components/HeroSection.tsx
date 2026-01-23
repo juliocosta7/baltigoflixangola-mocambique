@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
 import heroBanner from "@/assets/hero-banner-angola-mozambique.png";
 
@@ -54,18 +53,15 @@ const HeroSection = () => {
             </li>
           </ul>
 
-          {/* CTA Button with animations */}
-          <a href="https://wa.me/244954668786?text=Olá!%20Quero%20testar%20o%20BaltigoFlix" target="_blank" rel="noopener noreferrer">
-            <Button 
-              size="lg" 
-              className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-base sm:text-lg px-8 sm:px-10 py-5 sm:py-6 
-                transition-all duration-300 
-                hover:scale-105 hover:shadow-xl hover:shadow-primary/40 
-                active:scale-95 
-                animate-button-pulse"
-            >
+          {/* CTA Button with premium animations */}
+          <a 
+            href="https://wa.me/244954668786?text=Olá!%20Quero%20testar%20o%20BaltigoFlix" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            <button className="btn-premium text-base sm:text-lg px-8 sm:px-12 py-4 sm:py-5">
               TESTE GRÁTIS
-            </Button>
+            </button>
           </a>
         </div>
       </div>
