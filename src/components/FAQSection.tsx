@@ -39,7 +39,7 @@ const faqs = [
 ];
 
 const FAQSection = () => {
-  const whatsappSupport = "https://wa.me/+244954668786";
+  const whatsappSupport = "https://wa.me/244954668786?text=Olá!%20Preciso%20de%20suporte%20BaltigoFlix";
 
   return (
     <section className="py-12 sm:py-20 bg-gradient-hero">
