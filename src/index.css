@@ -246,12 +246,203 @@
     }
   }
 
+  /* Scroll reveal animations */
+  @keyframes fade-in-up {
+    0% {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-in-left {
+    0% {
+      opacity: 0;
+      transform: translateX(-40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fade-in-right {
+    0% {
+      opacity: 0;
+      transform: translateX(40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes scale-in {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  /* Glow border animation */
+  @keyframes glow-pulse {
+    0%, 100% {
+      box-shadow: 0 0 20px hsl(var(--primary) / 0.5), 0 0 40px hsl(var(--primary) / 0.3);
+    }
+    50% {
+      box-shadow: 0 0 30px hsl(var(--primary) / 0.7), 0 0 60px hsl(var(--primary) / 0.4);
+    }
+  }
+
+  /* Social proof toast animation */
+  @keyframes slide-in-bottom {
+    0% {
+      opacity: 0;
+      transform: translateY(100%) translateX(-50%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) translateX(-50%);
+    }
+  }
+
+  @keyframes slide-out-bottom {
+    0% {
+      opacity: 1;
+      transform: translateY(0) translateX(-50%);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(100%) translateX(-50%);
+    }
+  }
+
+  /* Bounce animation for WhatsApp */
+  @keyframes bounce-soft {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+
+  @keyframes ripple {
+    0% {
+      transform: scale(1);
+      opacity: 0.4;
+    }
+    100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
+
+  /* Countdown flip animation */
+  @keyframes flip-in {
+    0% {
+      transform: rotateX(90deg);
+      opacity: 0;
+    }
+    100% {
+      transform: rotateX(0);
+      opacity: 1;
+    }
+  }
+
   .animate-marquee {
     animation: marquee 30s linear infinite;
   }
 
   .animate-marquee-reverse {
     animation: marquee-reverse 30s linear infinite;
+  }
+
+  /* Scroll reveal utility classes */
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .fade-in-up {
+    animation: fade-in-up 0.6s ease-out forwards;
+  }
+
+  .fade-in-left {
+    animation: fade-in-left 0.6s ease-out forwards;
+  }
+
+  .fade-in-right {
+    animation: fade-in-right 0.6s ease-out forwards;
+  }
+
+  .scale-in {
+    animation: scale-in 0.5s ease-out forwards;
+  }
+
+  /* Stagger delays */
+  .stagger-1 { animation-delay: 0.1s; }
+  .stagger-2 { animation-delay: 0.2s; }
+  .stagger-3 { animation-delay: 0.3s; }
+  .stagger-4 { animation-delay: 0.4s; }
+  .stagger-5 { animation-delay: 0.5s; }
+
+  /* Glow border for popular cards */
+  .glow-border {
+    position: relative;
+    animation: glow-pulse 2s ease-in-out infinite;
+  }
+
+  .glow-border::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(45deg, hsl(var(--primary)), hsl(var(--secondary)), hsl(var(--primary)));
+    background-size: 200% 200%;
+    border-radius: inherit;
+    z-index: -1;
+    animation: gradient-rotate 3s linear infinite;
+  }
+
+  @keyframes gradient-rotate {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* Social proof toast */
+  .social-proof-toast {
+    animation: slide-in-bottom 0.5s ease-out forwards;
+  }
+
+  .social-proof-toast.hiding {
+    animation: slide-out-bottom 0.5s ease-out forwards;
+  }
+
+  /* WhatsApp button animations */
+  .whatsapp-bounce {
+    animation: bounce-soft 2s ease-in-out infinite;
+  }
+
+  .whatsapp-ripple {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: hsl(142 70% 45% / 0.4);
+    animation: ripple 1.5s ease-out infinite;
   }
 
   /* Premium CTA Button */

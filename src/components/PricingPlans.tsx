@@ -1,5 +1,6 @@
-import { Check } from "lucide-react";
+import { Check, Flame } from "lucide-react";
 import { useCountry, prices } from "@/contexts/CountryContext";
+import CountdownTimer from "./CountdownTimer";
 
 // Import payment method images
 import expressImg from "@/assets/express.png";
@@ -17,28 +18,32 @@ const planDetails = {
     duration: "Acesso de 1 mês",
     screens: "2 telas simultâneas",
     link: "https://pay.kambafy.com/checkout/e3df920e-4e56-4c77-baa4-9f08ca03e3fb",
-    popular: false
+    popular: false,
+    savings: null
   },
   trimestral: {
     name: "Trimestral",
     duration: "Acesso de 3 meses",
     screens: "3 telas simultâneas",
     link: "https://pay.kambafy.com/checkout/e3df920e-4e56-4c77-baa4-9f08ca03e3fb",
-    popular: true
+    popular: true,
+    savings: "23%"
   },
   semestral: {
     name: "Semestral",
     duration: "Acesso de 6 meses",
     screens: "3 telas simultâneas",
     link: "https://pay.kambafy.com/checkout/e3df920e-4e56-4c77-baa4-9f08ca03e3fb",
-    popular: false
+    popular: false,
+    savings: "42%"
   },
   anual: {
     name: "Anual",
     duration: "Acesso de 1 ano",
     screens: "4 telas simultâneas",
     link: "https://pay.kambafy.com/checkout/e3df920e-4e56-4c77-baa4-9f08ca03e3fb",
-    popular: false
+    popular: false,
+    savings: "58%"
   }
 };
 
@@ -75,7 +80,10 @@ const PricingPlans = () => {
           Aproveite esta <span className="text-primary">oportunidade única!</span>
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mt-8 sm:mt-12">
+        {/* Countdown Timer */}
+        <CountdownTimer />
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto">
           {planKeys.map((key) => {
             const plan = planDetails[key];
             const pricing = countryPrices.plans[key];
@@ -83,19 +91,29 @@ const PricingPlans = () => {
             return (
               <div 
                 key={key}
-                className={`relative bg-gradient-card rounded-2xl border overflow-hidden transition-transform duration-300 hover:scale-[1.02] ${
+                className={`relative bg-gradient-card rounded-2xl border overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:-translate-y-1 ${
                   plan.popular 
-                    ? 'border-primary shadow-fire' 
-                    : 'border-border/50'
+                    ? 'border-primary glow-border' 
+                    : 'border-border/50 hover:border-primary/50'
                 }`}
               >
+                {/* Popular badge */}
                 {plan.popular && (
-                  <div className="absolute top-0 left-0 right-0 bg-primary text-primary-foreground text-center py-1 text-sm font-bold">
+                  <div className="absolute top-0 left-0 right-0 bg-primary text-primary-foreground text-center py-1.5 text-sm font-bold flex items-center justify-center gap-2">
+                    <Flame className="w-4 h-4 animate-pulse" />
                     MAIS POPULAR
+                    <Flame className="w-4 h-4 animate-pulse" />
+                  </div>
+                )}
+
+                {/* Savings badge */}
+                {plan.savings && (
+                  <div className="absolute top-2 right-2 bg-secondary text-secondary-foreground text-xs font-bold px-2 py-1 rounded-full z-10">
+                    -{plan.savings}
                   </div>
                 )}
                 
-                <div className={`p-4 sm:p-6 ${plan.popular ? 'pt-10' : ''}`}>
+                <div className={`p-4 sm:p-6 ${plan.popular ? 'pt-12' : ''}`}>
                   <div className="text-center mb-4 sm:mb-6">
                     <span className="text-muted-foreground text-xs sm:text-sm uppercase">PLANO</span>
                     <h3 className="font-display text-2xl sm:text-3xl mt-1">{plan.name}</h3>

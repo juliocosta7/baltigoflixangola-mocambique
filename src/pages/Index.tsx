@@ -12,6 +12,8 @@ import GuaranteeSection from "@/components/GuaranteeSection";
 import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import SocialProofToast from "@/components/SocialProofToast";
+import ScrollReveal from "@/components/ScrollReveal";
 
 const Index = () => {
   const { country } = useCountry();
@@ -20,17 +22,46 @@ const Index = () => {
     <main className={`min-h-screen bg-background ${country === 'mozambique' ? 'theme-mozambique' : 'theme-angola'}`}>
       <Header />
       <HeroSection />
-      <LogosMarquee />
-      <VideoSection />
-      <ContentGallery />
-      <ReasonsSection />
-      <BenefitsFAQ />
-      <PricingComparison />
-      <PricingPlans />
-      <GuaranteeSection />
-      <FAQSection />
+      
+      <ScrollReveal>
+        <LogosMarquee />
+      </ScrollReveal>
+      
+      <ScrollReveal>
+        <VideoSection />
+      </ScrollReveal>
+      
+      <ScrollReveal>
+        <ContentGallery />
+      </ScrollReveal>
+      
+      <ScrollReveal>
+        <ReasonsSection />
+      </ScrollReveal>
+      
+      <ScrollReveal>
+        <BenefitsFAQ />
+      </ScrollReveal>
+      
+      <ScrollReveal>
+        <PricingComparison />
+      </ScrollReveal>
+      
+      <ScrollReveal>
+        <PricingPlans />
+      </ScrollReveal>
+      
+      <ScrollReveal>
+        <GuaranteeSection />
+      </ScrollReveal>
+      
+      <ScrollReveal>
+        <FAQSection />
+      </ScrollReveal>
+      
       <Footer />
       <FloatingWhatsApp />
+      <SocialProofToast />
     </main>
   );
 };
