@@ -25,7 +25,7 @@ const planDetails = {
     name: "Trimestral",
     duration: "Acesso de 3 meses",
     screens: "3 telas simultâneas",
-    link: "https://pay.kambafy.com/checkout/e3df920e-4e56-4c77-baa4-9f08ca03e3fb",
+    link: "https://pay.kambafy.com/checkout/5f9c7d38-5a22-4b09-8f05-a03c148845ad",
     popular: true,
     savings: "23%"
   },
@@ -33,7 +33,7 @@ const planDetails = {
     name: "Semestral",
     duration: "Acesso de 6 meses",
     screens: "3 telas simultâneas",
-    link: "https://pay.kambafy.com/checkout/e3df920e-4e56-4c77-baa4-9f08ca03e3fb",
+    link: "https://pay.kambafy.com/checkout/48ddaaad-787c-43f4-8852-6b0e73a32b88",
     popular: false,
     savings: "42%"
   },
