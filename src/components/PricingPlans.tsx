@@ -41,7 +41,7 @@ const planDetails = {
     name: "Anual",
     duration: "Acesso de 1 ano",
     screens: "4 telas simultâneas",
-    link: "https://pay.kambafy.com/checkout/e3df920e-4e56-4c77-baa4-9f08ca03e3fb",
+    link: "https://pay.kambafy.com/checkout/abc0391f-2940-49de-92d3-b3abd6c0c2ef",
     popular: false,
     savings: "58%"
   }
