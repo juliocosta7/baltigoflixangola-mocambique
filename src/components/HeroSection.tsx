@@ -1,7 +1,11 @@
 import { Check } from "lucide-react";
-import heroBanner from "@/assets/hero-banner-angola-mozambique.png";
+import heroBannerAngola from "@/assets/hero-banner-angola.png";
+import heroBannerMozambique from "@/assets/hero-banner-mozambique.png";
+import { useCountry } from "@/contexts/CountryContext";
 
 const HeroSection = () => {
+  const { country } = useCountry();
+  const heroBanner = country === "mozambique" ? heroBannerMozambique : heroBannerAngola;
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0a0a12] pt-16 sm:pt-20">
       {/* Background with banner image */}
